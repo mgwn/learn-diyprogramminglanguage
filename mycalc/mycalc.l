@@ -23,6 +23,6 @@ yywarp(void)
 [ \t] ;
 . {
 	fprintf(stderr,"lexical error .\n");
-	exit(1);
+	//exit(1);
 }
 %%
