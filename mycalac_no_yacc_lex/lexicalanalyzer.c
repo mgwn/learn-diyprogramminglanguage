@@ -112,6 +112,7 @@ void set_line(char *line)
 }
 
 /* 下面是测试驱动代码 */
+/*
 void parse_line(char *buf)
 {
 	Token token;
@@ -135,3 +136,4 @@ int main(int argc,char **argv)
 	}
 	return 0;
 }
+*/
