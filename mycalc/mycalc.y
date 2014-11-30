@@ -9,7 +9,7 @@
 	double	double_value;
 }
 %token <double_value>	DOUBLE_LITERAL
-%token ADD SUB MUL DIV CR
+%token ADD SUB MUL DIV LP RP CR
 %type <double_value> expression term primary_expression
 %%
 line_list
@@ -50,6 +50,14 @@ term
 	;
 primary_expression
 	:DOUBLE_LITERAL
+    | SUB primary_expression
+    {
+        $$ = -$2;
+    }
+    | LP expression RP
+    {
+        $$ = $2;
+    }
 	;
 %%
 int
